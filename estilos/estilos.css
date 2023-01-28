@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 40vh 40vh 40vh 40vh 40vh;
+    grid-template-rows: 40vh 40vh 40vh 40vh 40vh;
+
+    background-image: url("../recursos/img/pexels-johannes-plenio-1103970.jpg");
+    background-size: cover;
+}
+
+
+
+.nav-cv {
+    display: none;
+
+}
+
+.datos-contacto {
+    display: none;
+}
+
+.datosp {
+    display: none;
+
+}
+
+.boostrapOrder{    
+    /* color: blue; */
+}
+
+.datosPersonalesB{
+    /* background-color: blue; */
+}
+
+.datosContactoB{
+    
+    /* background-color: blue; */
+}
+
+.datos-experiencia{
+    /* background-color: blue; */
+    font-size: medium;
+
+}
+
+.form-1 {
+    display: none;
+    
+}
+
+
+.form-2 {
+    display: none;
+}
+
+
+.form-3 {
+    display: none;
+    
+}
+
+/*posicion del nav */
+.nav-cv {
+    grid-column: 2 / 6;
+    grid-row: 1 / 3;
+
+    /* justify-content: center; 
+    align-items: center; */
+
+}
+
+.navBoost{
+    grid-column: 2 / 6  ;
+    grid-row:  1;
+    margin-top: 5%;
+
+}
+
+.boostrapOrder{    
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* datos personales y contacto */
+
+.boostPrueba {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin: 10%;
+
+    /* background-color: aqua; */
+
+
+}
+
+/*posicionamiento de la experiencia*/
+.contenedor-form {
+    grid-column: 2 / 5;
+    grid-row: 3;
+    margin-left: 5%;
+
+    
+
+}
+
+/*posicionamiento de la foto*/
+.contenedor-p {
+    display: none;
+    grid-column: 1;
+    grid-row: 1 ;
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+}
+
+img {
+    border-radius: 60%;
+    border: solid rgba(58, 255, 255, 0.459);
+    margin-top: 20%;
+}
+
+/* css barra */
+
+.css{
+    display: none;
+    grid-column: 1;
+    grid-row: 1/6;
+    background-color: #597f66;
+    background-image: linear-gradient(122deg, #597f66 0%, #99b8cd 50%, #254149 100%);
+    
+    
+    
+    
+
+    z-index: 0;
+    margin: 10%;
+}
+
+.css2{
+    display: none;
+    margin-left: 80px;
+    grid-column: 1;
+    grid-row: 3 ;
+    z-index: 1;
+}
+
+.css3{
+    margin-top: 100px;
+}
+
+/* inicio boton portada */
+
+.bienvenidoGrid {
+    display: grid;
+    justify-content: center;
+    content: center;
+    grid-column: 1/6 ;
+    grid-row: 1;
+
+
+}
+
+.portada-css{
+    margin-top: 50px;
+
+}
+
+.btn-portada{
+    /* padding: 20px; */
+    margin-top: 100px;
+    border-radius: 10%;
+    background: transparent;
+    color: #000000;
+    border: 5px solid #0099CC;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+    
+}
+
+.btn-portada:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+/* pantalla de carga */
+.spinner {
+    display: none;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+
+  
+    animation: spin 1s ease infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
