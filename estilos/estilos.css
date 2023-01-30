@@ -8,6 +8,9 @@ body{
     background-size: cover;
 }
 
+.classP {
+    color: black;
+}
 
 
 .nav-cv {
@@ -22,19 +25,6 @@ body{
 .datosp {
     display: none;
 
-}
-
-.boostrapOrder{    
-    /* color: blue; */
-}
-
-.datosPersonalesB{
-    /* background-color: blue; */
-}
-
-.datosContactoB{
-    
-    /* background-color: blue; */
 }
 
 .datos-experiencia{
@@ -63,16 +53,13 @@ body{
 .nav-cv {
     grid-column: 2 / 6;
     grid-row: 1 / 3;
-
-    /* justify-content: center; 
-    align-items: center; */
-
 }
 
 .navBoost{
     grid-column: 2 / 6  ;
     grid-row:  1;
     margin-top: 5%;
+    
 
 }
 
@@ -155,12 +142,18 @@ img {
     content: center;
     grid-column: 1/6 ;
     grid-row: 1;
+    font-family: 'Aboreto', cursive;
+    font-size: xx-large;
+    text-decoration: double;
+    
 
 
 }
 
 .portada-css{
     margin-top: 50px;
+    /* font-size: x-large; */
+
 
 }
 
@@ -174,12 +167,33 @@ img {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 20px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-      transition-duration: 0.4s;
-    
+    -webkit-transition-duration: 0.4s; 
+      transition-duration: 0.4s;;
 }
 
 .btn-portada:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.btn-aleatorio{
+    width: 15vh;
+    height: 15vh;
+    position: fixed;
+    margin-left: 85%;
+    margin-top: 2%;
+    background: transparent;
+    color: #000000;
+    border: 5px solid #0099CC;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+      font-family: 'Aboreto', cursive;
+}
+
+.btn-aleatorio:hover {
     background-color: #008CBA;
     color: white;
 }
@@ -193,11 +207,11 @@ img {
     height: 80px;
     border-radius: 50%;
     border-left-color: #09f;
-    grid-column: 2 / 4;
+    grid-column: 1 / 6;
     grid-row: 2 / 3;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15%;
+    margin-top: 10%;
 
   
     animation: spin 1s ease infinite;
@@ -212,3 +226,10 @@ img {
       transform: rotate(360deg);
     }
   }
+
+.fontAwesome {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: 50%;
+    margin-top: 50%;
+}

@@ -16,6 +16,7 @@ const cssBase =  document.getElementById("cssBase")
 const cssDos = document.getElementById("cssDos")
 const bodyCv = document.getElementById("bodyCv")
 const spinner = document.getElementById("spinner1")
+const fontAwesome1 = document.getElementById("fontAwesomeid")
 const rutaWeb = 'https://randomuser.me/api/';
 const refexp = "./refexp.json";
 
@@ -74,23 +75,25 @@ const refexp = "./refexp.json";
 
 
     //per 1 2 3 , hace lectura del perfil profesional (acomodar no es lectura de experiencia)
-  const per1 = function () {
 
-    fetch("per1.json")
-  .then((promise) => promise.json())
-  .then((data2) => {
-    data2.forEach((element) => {
-      datosExperiencia.innerHTML += `
-      <h3${element.perfil}</h3>
-      <p>${element.detalle}</p>
-        `  
-    });
-    ordenar1();
-  })
-  .catch(function(error) {
-    console.log(error);
-    });
-}
+ 
+
+    const per1 = function () {
+      fetch("per1.json")
+    .then((promise) => promise.json())
+    .then((data2) => {
+      data2.forEach((element) => {
+        datosExperiencia.innerHTML += `
+        <h3>${element.perfil}</h3>
+        <p>${element.detalle}</p>
+          `
+      });
+      ordenar1();
+    })
+    .catch(function(error) {
+      console.log(error);
+      });
+    }
 
 const per2 = function () {
   fetch("per2.json")
@@ -151,15 +154,13 @@ cssDos.style.display = "grid"
 
 //cambia el background al generar un CV
 const bodyCv1 = () => {
-  bodyCv.style.backgroundImage = "url('../recursos/img/pexels-mitchell-luo-3694708.jpg')"
+  bodyCv.style.backgroundImage = ('../recursos/img/pexels-mitchell-luo-3694708.jpg')
   
   
 }
 
 //Genero la estructura del sitio  ---------------------------------------------------------------------------
 const welcome = () => {
-
-
 
 const portada = document.createElement("div")
 portada.className = "portada-css"
@@ -176,13 +177,31 @@ btnPortada.className = "btn-portada"
 btnPortada.append(btnPortadaB)
 bienvenido.append(btnPortada)
 
+
+
 //Muestra el CV
 btnPortada.addEventListener("click", () => {
 
   //muestro el spinner de carga
   spinner.style.display = "grid"
+  btnPortada.style.display = "none"
+  fontAwesome1.style.display = "none"
 
   setTimeout(() => {
+
+    const btnAleatorio = document.createElement("button")
+    const btnAleatorioB = document.createTextNode("Inicio")
+    btnAleatorio.className = "btn-aleatorio"
+
+    btnAleatorio.append(btnAleatorioB)
+    bodyCv.append(btnAleatorio)
+
+    btnAleatorio.addEventListener("click", () => {
+      location.reload()
+      welcome()
+    })
+
+
     spinner.style.display = "none"
     btnPortada.style.display = "none"
     portada.style.display = "none"
@@ -205,7 +224,6 @@ btnPortada.addEventListener("click", () => {
   bodyCv1();
 
 }, 3000);
-
 
 })
 
